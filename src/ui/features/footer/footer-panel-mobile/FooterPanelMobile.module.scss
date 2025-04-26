@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 58px;
+  padding: 0 10px;
+
+  background-color: var(--app-sider-background);
+  border: var(--app-border);
+  border-radius: var(--app-border-radius);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  line-height: 56px;
+
+  border-bottom: none;
+}

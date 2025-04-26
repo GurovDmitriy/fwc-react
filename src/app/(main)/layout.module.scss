@@ -1,0 +1,83 @@
+.layout {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  padding: 10px;
+}
+
+/**
+ * **********************************
+ * Header Affix Mobile - Desktop
+ * **********************************
+*/
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background-color: transparent;
+}
+
+.header-affix {
+  width: 100%;
+}
+
+.header-inner {
+  padding: 10px;
+  padding-bottom: 20px;
+
+  background-image: linear-gradient(
+    180deg,
+    var(--app-main-background) 80%,
+    transparent
+  );
+}
+
+/**
+ * **********************************
+ * Sider Desktop
+ * **********************************
+*/
+
+.sider {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  padding: 10px;
+  overflow: hidden;
+
+  background-color: transparent;
+
+  &-ghost {
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.sider-container {
+  height: 100%;
+
+  background-color: var(--app-sider-background);
+  border: 1px solid var(--app-border-color);
+  border-radius: var(--app-panel-border-radius);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: var(--footer-height);
+  margin: 20px 10px 10px;
+  padding: 0;
+
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+.col {
+  height: 400px;
+}
+
+.skeleton {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--app-color-primary);
+  border-radius: var(--app-border-radius);
+  opacity: 0.2;
+}
