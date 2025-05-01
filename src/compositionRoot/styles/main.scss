@@ -1,0 +1,53 @@
+@use "../../shared/assets/styles/reset";
+
+:root {
+  --root-font-size-default: 16px;
+  --root-width-min: 340px;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: var(--root-width-min);
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-size: var(--root-font-size-default);
+  line-height: 1.4;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: var(--root-width-min);
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-size: var(--root-font-size-default);
+  line-height: 1.4;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}

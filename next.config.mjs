@@ -27,7 +27,7 @@ const nextConfig = {
   },
 
   sassOptions: {
-    additionalData: '',
+    additionalData: '@use "@/compositionRoot/styles/global.scss" as *;',
   },
 
   compiler: {
