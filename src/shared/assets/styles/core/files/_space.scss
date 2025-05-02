@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "breakpoints" as *;
 
-:root {
+.root {
   --app-space-xs: 4px;
 
   @include min-sm {

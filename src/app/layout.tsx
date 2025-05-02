@@ -17,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="root">
         <AntdProvider>
           <QCProvider>{children}</QCProvider>
         </AntdProvider>
