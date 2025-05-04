@@ -7,7 +7,9 @@ import "../compositionRoot/styles/main.scss"
 // order comment
 import AntdProvider from "@/core/Antd/AntdProvider"
 import QCProvider from "@/core/QueryClient/QCProvider"
-import type { ReactNode } from "react"
+import { AppLayout } from "@/layouts/AppLayout"
+import { type ReactNode, Suspense } from "react"
+import "../../firebase"
 
 export const metadata = {
   title: "Next.js",
@@ -19,7 +21,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="root">
         <AntdProvider>
-          <QCProvider>{children}</QCProvider>
+          <Suspense>
+            <QCProvider>
+              <AppLayout>{children}</AppLayout>
+            </QCProvider>
+          </Suspense>
         </AntdProvider>
       </body>
     </html>

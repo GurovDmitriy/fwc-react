@@ -1,0 +1,65 @@
+.header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 2px;
+
+  border: 1px solid black;
+
+  transform: translateX(-50%);
+}
+
+.logo-main {
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.45em;
+}
+
+.logo-description {
+  font-size: 8px;
+  line-height: 1;
+  letter-spacing: 0.35em;
+}
+
+.navigation ul {
+  display: flex;
+}
+
+.navigation-item {
+  position: relative;
+
+  padding: 20px 10px;
+
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+
+    width: 0;
+    height: 1px;
+
+    background-color: currentcolor;
+
+    transition: width 0.15s ease;
+
+    content: "";
+  }
+
+  &:hover::after {
+    width: calc(100% - 20px);
+  }
+}

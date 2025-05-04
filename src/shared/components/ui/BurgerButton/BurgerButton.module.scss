@@ -1,0 +1,46 @@
+.burger {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 48px;
+  height: 2px;
+
+  background-color: black;
+  border-radius: 3px;
+
+  transition: all 0.3s ease;
+
+  &:nth-child(2) {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.burger-line_opened {
+  &:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  &:nth-child(2) {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+
+  &:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+}

@@ -1,7 +1,23 @@
+"use client"
+
+import { useCategoriesList } from "@/domains/Categories"
+import { CategoryCard } from "@/features/CategoryCard"
+import styles from "./page.module.scss"
+
 export default function PageHome() {
+  const { categories } = useCategoriesList()
+
   return (
-    <div>
-      <h1>FWC React</h1>
+    <div className={styles.container}>
+      <div className={styles.categories}>
+        {categories.map((category) => (
+          <CategoryCard
+            className={styles.category}
+            key={category.id}
+            category={category}
+          />
+        ))}
+      </div>
     </div>
   )
 }

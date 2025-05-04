@@ -1,0 +1,16 @@
+.sidebar {
+  position: absolute;
+  bottom: 0;
+
+  height: calc(100% - 100px);
+
+  padding: 20px;
+}
+
+.wrapper {
+  box-shadow: none;
+}
+
+.header {
+  display: none;
+}
