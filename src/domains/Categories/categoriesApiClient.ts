@@ -1,13 +1,11 @@
-import { collection, getDocs } from "firebase/firestore"
-import { db } from "../../../firebase"
+import makeServer from "@/server"
 
 export const categoriesApiClient = async () => {
+  makeServer()
+
   try {
-    const querySnapshot = await getDocs(collection(db, "categories"))
-    return querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }))
+    const response = await fetch("/api/categories")
+    return await response.json()
   } catch (error) {
     console.log(error)
   }

@@ -15,10 +15,6 @@ export function AppHeader({ isSidebarOpen, onSidebarOpen }: AppHeaderProps) {
   return (
     <div className={styles.header}>
       <BurgerButton isActive={isSidebarOpen} onActive={onSidebarOpen} />
-      <div className={styles.logo}>
-        <div className={styles["logo-main"]}>FWC</div>
-        <div className={styles["logo-description"]}>FWC—shop</div>
-      </div>
       <nav className={styles.navigation}>
         <ul>
           {navigation.map((item) => (
